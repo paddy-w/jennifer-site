@@ -1,0 +1,24 @@
+[[main]]
+name = "About"
+url = "/#about"
+weight = 2
+
+[[main]]
+name = "CV"
+url = "/files/JenniferShiyueZhang_CV_Jan2026.pdf"
+weight = 3
+
+[[main]]
+name = "Research"
+url = "/research/"
+weight = 4
+
+[[main]]
+name = "Teaching"
+url = "/teaching/"
+weight = 5
+
+[[main]]
+name = "Contact"
+url = "/#contact"
+weight = 6

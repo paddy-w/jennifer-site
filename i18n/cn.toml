@@ -1,0 +1,125 @@
+[read_more]
+other = "阅读更多"
+
+[by]
+other = "作者"
+
+[posted_on]
+other = "发布于"
+
+[tags]
+other = "标签"
+
+[contact]
+other = "联系方式"
+
+[send]
+other = "发送"
+
+[skills]
+other = "技能"
+
+[experience]
+other = "经历"
+
+[about]
+other = "关于"
+
+[blog]
+other = "博客"
+
+[engineering]
+other = "工程"
+
+[contributions]
+other = "贡献"
+
+[technical]
+other = "技术栈"
+
+[language]
+other = "语言"
+
+[getInTouch]
+other = "联系我"
+
+[learnMore]
+other = "了解更多"
+
+[sendMeAMessage]
+other = "给我留言"
+
+[contactInformation]
+other = "联系信息"
+
+[priorityContact]
+other = "优先联系方式"
+
+[aboutMe]
+other = "关于我"
+
+[connectOnLinkedIn]
+other = "在领英上联系"
+
+[quickFacts]
+other = "快速了解"
+
+[more]
+other = "更多"
+
+[aboutName]
+other = "关于"
+
+[relatedContent]
+other = "相关内容"
+
+[interests]
+other = "兴趣爱好"
+
+[languages]
+other = "语言"
+
+[helloIm]
+other = "你好，我是"
+
+[viewCV]
+other = "查看简历"
+
+[downloadResume]
+other = "下载简历"
+
+[keyAchievements]
+other = "主要成就"
+
+[demoImageAlt]
+other = "示例图片"
+
+[galleryNotFound]
+other = "未找到图片画廊"
+
+[viewOnGithub]
+other = "在 GitHub 上查看"
+
+[iframeIdRequired]
+other = "错误：iframe 短代码需要 'id' 参数"
+
+[fullscreen]
+other = "全屏"
+
+[youtubePlayerTitle]
+other = "YouTube 播放器"
+
+[vimeoPlayerTitle]
+other = "Vimeo 播放器"
+
+[pageNotFound]
+other = "页面未找到"
+
+[pageNotFoundSubtitle]
+other = "您要查找的页面不存在。"
+
+[goHome]
+other = "返回首页"
+
+[certainlyNotHere]
+other = "肯定不在这里"
