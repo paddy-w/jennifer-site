@@ -32,7 +32,7 @@ Before academia, I worked in the advertising industry for a music streaming star
 
 When I'm not teaching or researching, I enjoy spending time in nature and immersing myself in outdoor activities. If you can't reach me during non-business hours, I'm probably trekking somewhere with spectacularly bad cell service…like, Everest Base Camp.
 """
-hero_location = "Champaign, US"
+hero_location = "Champaign, USA"
 
 #[languages.zh]
 #contentDir = "content/zh"
