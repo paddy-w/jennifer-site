@@ -1,0 +1,113 @@
+{{ define "main" }}
+<section class="pt-8 pb-12 bg-bg dark:bg-bg">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{ if .Params.sections.intro.heading }}
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-4 font-heading text-text-primary dark:text-text-primary">{{ .Params.sections.intro.heading }}</h2>
+      <div class="prose max-w-none prose-lg dark:prose-invert prose-gray">
+        {{ if .Params.sections.intro.content }}
+        {{ .Params.sections.intro.content | markdownify }}
+        {{ else }}
+        <p class="text-text-secondary dark:text-text-secondary italic">Content to be added...</p>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    {{ if .Params.sections.papers }}
+    {{ range $yearIndex, $year := .Params.sections.papers }}
+    <div class="mb-8">
+      <button
+        class="year-header w-full flex items-center justify-between p-4 bg-bg-secondary dark:bg-bg-tertiary rounded-t-lg border border-border-primary dark:border-border-primary cursor-pointer transition-all duration-200 hover:bg-bg dark:hover:bg-bg"
+        onclick="toggleYear(this)"
+        aria-expanded="{{ if eq $yearIndex 0 }}true{{ else }}false{{ end }}"
+      >
+        <h2 class="text-2xl font-bold font-heading text-text-primary dark:text-text-primary">{{ .year }}</h2>
+        <i class="fas fa-chevron-down text-text-secondary transition-transform duration-300{{ if eq $yearIndex 0 }} rotated{{ end }}"></i>
+      </button>
+      
+      <div class="year-content{{ if eq $yearIndex 0 }}{{ else }} collapsed{{ end }} bg-bg dark:bg-bg border-l border-r border-b border-border-primary dark:border-border-primary rounded-b-lg">
+        {{ range .entries }}
+        <div class="p-6 border-b border-border-primary dark:border-border-primary last:border-b-0">
+          <h3 class="text-xl font-semibold mb-2 text-text-primary dark:text-text-primary">{{ .title }}</h3>
+          <p class="text-base mb-1 text-text-secondary dark:text-text-secondary">{{ .authors | markdownify}}</p>
+          <p class="text-base mb-4 text-text-primary dark:text-text-primary font-medium italic">{{ .journal }}</p>
+          
+          <div class="mb-4">
+            <p class="text-l text-text-primary dark:text-text-primary leading-relaxed">{{ .abstract }}</p>
+          </div>
+          
+          {{ if .link }}
+          <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary hover:text-primary-dark dark:text-primary-light dark:hover:text-primary transition-colors duration-200 font-medium">
+            Read more
+            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+<style>
+.year-header {
+  cursor: pointer;
+  outline: none;
+}
+
+.year-header:focus {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.year-content {
+  display: block;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.year-content.collapsed {
+  display: none;
+}
+
+.year-header .fa-chevron-down.rotated {
+  transform: rotate(180deg);
+}
+</style>
+
+<script>
+function toggleYear(header) {
+  const content = header.nextElementSibling;
+  const chevron = header.querySelector('.fa-chevron-down');
+  const isExpanded = header.getAttribute('aria-expanded') === 'true';
+  
+  if (isExpanded) {
+    header.setAttribute('aria-expanded', 'false');
+    content.classList.add('collapsed');
+    chevron.classList.remove('rotated');
+  } else {
+    document.querySelectorAll('.year-header').forEach(h => {
+      h.setAttribute('aria-expanded', 'false');
+      h.querySelector('.fa-chevron-down').classList.remove('rotated');
+    });
+    document.querySelectorAll('.year-content').forEach(c => {
+      c.classList.add('collapsed');
+    });
+    header.setAttribute('aria-expanded', 'true');
+    content.classList.remove('collapsed');
+    chevron.classList.add('rotated');
+    
+    setTimeout(() => {
+      const navHeight = document.querySelector('nav').offsetHeight;
+      const headerRect = header.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      window.scrollTo({
+        top: scrollTop + headerRect.top - navHeight - 20,
+        behavior: 'smooth'
+      });
+    }, 100);
+  }
+}
+</script>
+{{ end }}

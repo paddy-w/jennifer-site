@@ -1,0 +1,78 @@
+{{ define "main" }}
+<section class="pt-8 pb-12 bg-bg dark:bg-bg">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{ if .Params.sections.teaching.heading }}
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 font-heading text-text-primary dark:text-text-primary">{{ .Params.sections.teaching.heading }}</h2>
+      
+      {{ range .Params.sections.teaching.sections }}
+      <div class="mb-8 p-6 bg-bg-secondary dark:bg-bg-tertiary rounded-lg shadow-sm border border-border-primary dark:border-border-primary">
+        <h3 class="text-xl font-bold mb-2 text-text-primary dark:text-text-primary">{{ .role }}</h3>
+        <p class="text-base mb-4 text-text-secondary dark:text-text-secondary">{{ .department }}</p>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse text-base">
+            <tbody>
+              {{ range $course := .courses }}
+                {{ range $i, $entry := $course.entries }}
+                <tr>
+                  {{ if eq $i 0 }}
+                  <td class="py-3 pr-4 align-top" rowspan="{{ len $course.entries }}">
+                    <span class="italic text-text-primary dark:text-text-primary">{{ $course.name }}</span>
+                  </td>
+                  {{ end }}
+                  <td class="py-3 pl-4 align-top text-text-primary dark:text-text-primary" style="text-align: right;">
+                    {{ $entry.semester }}
+                  </td>
+                </tr>
+                {{ end }}
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.sections.intro.heading }}
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-4 font-heading text-text-primary dark:text-text-primary">{{ .Params.sections.intro.heading }}</h2>
+      <div class="prose max-w-none prose-lg dark:prose-invert prose-gray">
+        {{ if .Params.sections.intro.content }}
+        {{ .Params.sections.intro.content | markdownify }}
+        {{ else }}
+        <p class="text-text-secondary dark:text-text-secondary italic">Content to be added...</p>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+
+    {{ if .Params.sections.materials.heading }}
+    <div>
+      <h2 class="text-2xl font-bold mb-6 font-heading text-text-primary dark:text-text-primary">{{ .Params.sections.materials.heading }}</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {{ range .Params.sections.materials.pdfs }}
+        <a href="{{ .pdf }}" target="_blank" rel="noopener noreferrer" class="group block">
+          <div class="bg-bg-secondary dark:bg-bg-tertiary rounded-lg overflow-hidden shadow-sm border border-border-primary dark:border-border-primary transition-shadow duration-200 hover:shadow-md">
+            <div class="aspect-video overflow-hidden">
+              <img 
+                src="{{ .image }}" 
+                alt="{{ .title }}" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-3">
+              <p class="text-sm font-medium text-text-primary dark:text-text-primary text-center line-clamp-2">{{ .title }}</p>
+            </div>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
