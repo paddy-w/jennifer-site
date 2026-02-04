@@ -98,6 +98,12 @@ name = "LinkedIn"
 icon = "fa-brands fa-linkedin"
 url = "https://www.linkedin.com/in/shiyue-zhang-212766ba"
 
+[[params.social]]
+type = "link"
+name = "UIUC"
+icon = "fa-solid fa-building-columns"
+url = "https://media.illinois.edu/shiyue-jennifer-zhang"
+
 # Dynamic Color Palettes Configuration
 # Multiple color palettes that will be randomly selected on each page load
 # Each palette contains main_color, second_color, and third_color
