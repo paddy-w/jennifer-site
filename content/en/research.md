@@ -37,7 +37,7 @@ sections:
           abstract: "Satire is often used in science communication, but it is unclear how it influences perceptions of message credibility and reliance on the information. We examine how two satire types (gentle, harsh) influence perceived message credibility and information reliance, which we define as using the information in discussions or for attitudinal and behavioral changes. Using a partial mediation model, we found no effects of gentle satire, but harsh satire negatively influenced message credibility, which was positively linked to information reliance. Contrary to previous research, we found that the satire type matters. Practical implications include being cautious when using harsh satire."
           link: "https://doi.org/10.1177/10755470241293361"
 
-        - title: "Engaging the dismissive: An assessment of humor-based strategies to support global warming action"
+        - title: "Engaging the Dismissive: An Assessment of Humor-based Strategies to Support Global Warming Action"
           authors: "Meaghan McKasy, Michael A. Cacciatore, Sara K. Yeo, **Jennifer Shiyue Zhang**, John Cook, Rhoda Olaleye, & Leona Yi-Fan Su"
           journal: "Public Understanding of Science"
           abstract: "This study aims to understand the influence of mirth, anger, and hope, as elicited by messages with different humor types, on support for global warming action, and the potential moderating role of individual climate concern. Although mirth did not significantly vary across the different stimuli, the analysis found that climate concern moderated the influence of hope on support for global warming actions. The implications of these findings, especially for respondents who were least supportive of actions to combat global warming, are discussed."
@@ -52,7 +52,7 @@ sections:
           link: "https://doi.org/10.1080/21548455.2022.2123259"
     - year: 2022
       entries:
-        - title: "Outdoor-sports brands’ Instagram strategies: how message attributes relate to consumer engagement"
+        - title: "Outdoor-sports Brands’ Instagram Strategies: How Message Attributes Relate to Consumer Engagement"
           authors: "**Jennifer Shiyue Zhang** & Leona Yi-Fan Su"
           journal: "International Journal of Advertising"
           abstract: "Brands increasingly use social media to engage with consumers as part of their marketing efforts. This study analyzes the Instagram strategies used by three global outdoor-sports brands and their respective effects on consumer-brand engagement, operationalized as the number of ‘likes’ and comments received by posts. Content analysis conducted on Instagram posts from Arc’teryx, Salomon, and Patagonia focused on messages’ textual, visual, and technical attributes. The results indicate that task- and interaction-oriented posts received more ‘likes’ than self-oriented ones. Brand messages that were shorter, included photos and/or ‘cute’ visuals, or mentioned other Instagram users were found to motivate consumer engagement on Instagram. These findings will facilitate social media marketers’ development of effective Instagram branding strategies."
