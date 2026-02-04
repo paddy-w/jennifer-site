@@ -18,7 +18,7 @@ name = "Teaching"
 url = "/teaching/"
 weight = 5
 
-[[main]]
-name = "Contact"
-url = "/#contact"
-weight = 6
+# [[main]]
+# name = "Contact"
+# url = "/#contact"
+# weight = 6

@@ -20,23 +20,31 @@ languageName = "English"
 weight = 1
 
 [languages.en.params]
-name = "Jennifer"
-nav_name = "Jennifer"
+name = "Jennifer Zhang"
+nav_name = """Shiyue "Jennifer" Zhang"""
 tagline = "PhD Candidate"
-hero_description = "Jennifer is currently a Ph.D. candidate at the Institute of Communications Research. She is primarily interested in using social media for strategic communication in the context of health, scientific, and environmental topics. Her research utilized methods mainly from quantitative traditions. Her doctoral dissertation investigates different visual strategies for combating health misinformation on social media. She is also interested in brand communication across social media platforms. Her master thesis “Outdoor sports brands’ strategies for building Instagram brand community” explored how outdoor recreational brands developed their social media branding communities on Instagram utilizing content analysis methods."
+hero_description = """
+Hi there! I am Jennifer (张诗悦). I am currently a Ph.D. candidate at the University of Illinois Urbana-Champaign (UIUC). My research examines strategic message design and effects in digital environments, with applications across advertising, health, science, and environmental communication. The central question driving my work is "How does strategic messaging influence brand perceptions and public understanding of complex issues related to health, science, and environment?”
+
+At UIUC, I have taught a variety of undergraduate courses, including *Audience Analysis*, *Advertising Research Methods*, *Advertising and Brand Strategy*, and *Introduction to Advertising*.
+
+Before academia, I worked in the advertising industry for a music streaming startup and media publishers in Shanghai and Beijing, leading public relations campaigns, new media content creation, and integrated communication strategies.
+
+When I'm not teaching or researching, I enjoy spending time in nature and immersing myself in outdoor activities. If you can't reach me during non-business hours, I'm probably trekking somewhere with spectacularly bad cell service…like, Everest Base Camp.
+"""
 hero_location = "Champaign, US"
 
-[languages.cn]
-contentDir = "content/cn"
-languageName = "中文"
-weight = 2
-
-[languages.cn.params]
-name = "张诗悦"
-nav_name = "张诗悦"
-tagline = "博士生"
-hero_description = "Jennifer 目前是伊利诺伊大学香槟分校传播学研究所的博士候选人。她主要关注在健康、科学和环境议题背景下，利用社交媒体进行战略传播。她的研究主要采用定量方法。她的博士论文研究了社交媒体上对抗健康错误信息的不同视觉策略。她还对社交媒体平台的品牌传播感兴趣。她的硕士论文《户外运动品牌在Instagram上建立品牌社区的策略》探讨了户外休闲品牌如何利用内容分析方法在Instagram上发展其社交媒体品牌社区。"
-hero_location = "美国香槟市"
+#[languages.zh]
+#contentDir = "content/zh"
+#languageName = "中文"
+#weight = 2
+#
+#[languages.zh.params]
+#name = "张诗悦"
+#nav_name = "张诗悦"
+#tagline = "博士生"
+#hero_description = "Jennifer 目前是伊利诺伊大学香槟分校传播学研究所的博士候选人。她主要关注在健康、科学和环境议题背景下，利用社交媒体进行战略传播。她的研究主要采用定量方法。她的博士论文研究了社交媒体上对抗健康错误信息的不同视觉策略。她还对社交媒体平台的品牌传播感兴趣。她的硕士论文《户外运动品牌在Instagram上建立品牌社区的策略》探讨了户外休闲品牌如何利用内容分析方法在Instagram上发展其社交媒体品牌社区。"
+#hero_location = "美国香槟市"
 
 [build]
 writeStats = true
@@ -46,11 +54,10 @@ name = "Jennifer"
 email = "shiyue2@illinois.edu"
 profile_image = "/images/jennifer-profile.jpg"
 author = "Jennifer Zhang"
-description = "Jennifer is currently a Ph.D. candidate at the Institute of Communications Research. She is primarily interested in using social media for strategic communication in the context of health, scientific, and environmental topics. Her research utilized methods mainly from quantitative traditions. Her doctoral dissertation investigates different visual strategies for combating health misinformation on social media. She is also interested in brand communication across social media platforms. Her master thesis “Outdoor sports brands’ strategies for building Instagram brand community” explored how outdoor recreational brands developed their social media branding communities on Instagram utilizing content analysis methods."
-linkedin_url = "https://www.linkedin.com/in/shiyue-zhang-212766ba"
-linkedin_text = "linkedin.com/in/shiyue-zhang"
-orcid_url = "https://orcid.org/0000-0001-6697-6143"
-orcid_text = "orcid.org/0000-0001-6697-6143"
+# linkedin_url = "https://www.linkedin.com/in/shiyue-zhang-212766ba"
+# linkedin_text = "linkedin.com/in/shiyue-zhang"
+# orcid_url = "https://orcid.org/0000-0001-6697-6143"
+# orcid_text = "orcid.org/0000-0001-6697-6143"
 copyright = "© 2026 | Jennifer Shiyue Zhang"
 
 # Contact Form Configuration
@@ -67,8 +74,29 @@ copyright = "© 2026 | Jennifer Shiyue Zhang"
 # - FORMSPREE_ENDPOINT: Your Formspree endpoint URL
 
 [[params.social]]
-icon = "linkedin-in"
-url = "https://www.linkedin.com/in/shiyue-zhang-212766ba/"
+type = "email"
+name = "Email"
+icon = "fa-solid fa-envelope"
+url = "shiyue2@illinois.edu"
+
+[[params.social]]
+type = "link"
+name = "Google Scholar"
+# icon = "fa-brands fa-google-scholar"
+icon = "fa-solid fa-graduation-cap"
+url = "https://scholar.google.com/citations?user=fc-JZ5MAAAAJ"
+
+[[params.social]]
+type = "link"
+name = "ORCID"
+icon = "fa-brands fa-orcid"
+url = "https://orcid.org/0000-0001-6697-6143"
+
+[[params.social]]
+type = "link"
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin"
+url = "https://www.linkedin.com/in/shiyue-zhang-212766ba"
 
 # Dynamic Color Palettes Configuration
 # Multiple color palettes that will be randomly selected on each page load
